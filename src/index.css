@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bckg-fundamental{
+  background-image: url("https://www.fundamental.bg/img/artboard.avif");
+}
+
+.rightToLeft{
+  animation: rightToLeft 10s infinite linear;
+}
+
+.rollingText{
+  -webkit-text-stroke-width : 1px;
+  -webkit-text-stroke-color: #3ec091;
+  -webkit-text-fill-color: #fff;
+}
+
+@keyframes rightToLeft {
+  form{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}
