@@ -5,7 +5,7 @@ const Navbar = () => {
     const [isAtTop, setIsAtTop] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
 
-    const handleClickBuger = () =>{
+    const handleOpenMenu = () =>{
         setIsOpen(true)
     }
 
@@ -37,7 +37,7 @@ const Navbar = () => {
                     <button className="py-2 px-4 rounded bg-[#3EC091] text-lg font-semibold 2xl:text-xl hidden lg:block xl:flex transition-all duration-300 hover:bg-white hover:text-[#3EC091]"  href="#">
                         Start our journey
                     </button>
-                    <a className="cursor-pointer" onClick={handleClickBuger}>
+                    <a className="cursor-pointer" onClick={handleOpenMenu}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 hover:text-[#3EC091] transition-all duration-300 text-white">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
                         </svg>
@@ -74,7 +74,7 @@ const Navbar = () => {
                         </li>
                     </ul>
 
-                    <button onClick={handleClickBuger} className="cursor-pointer xl:hidden">
+                    <button onClick={handleOpenMenu} className="cursor-pointer xl:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 hover:text-[#3EC091] transition-all duration-300 text-white">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
                         </svg>
