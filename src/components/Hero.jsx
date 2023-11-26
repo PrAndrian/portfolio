@@ -4,9 +4,9 @@ const Hero = () => {
         <h1 className="
             leading-tight 
             text-5xl 
-            lg:text-[70px] 
-            xl:text-[90px] 
-            2xl:text-[120px] 
+            lg:text-[90px] 
+            xl:text-[120px] 
+            2xl:text-[140px] 
             xl:max-w-8xl 
             2xl:max-w-8xl 
             font-bold 
