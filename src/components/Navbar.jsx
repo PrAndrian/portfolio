@@ -1,27 +1,37 @@
-import { useState,useEffect } from "react"
+import { useState,useEffect, useRef } from "react"
 import Menu from "./Menu";
 
 const Navbar = () => {
     const [isAtTop, setIsAtTop] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
+    const elementRef = useRef(null);
 
     const handleOpenMenu = () =>{
         setIsOpen(true)
     }
 
     useEffect(() => {
-      const handleScroll = () => {
-        const scrollTop = window.scrollY;
-        setIsAtTop(scrollTop === 0);
-      };
+        const handleScroll = () => {        
+            if (elementRef.current) {
+                const elementPosition = elementRef.current.getBoundingClientRect();
+                const isElementVisible = elementPosition.top < window.innerHeight && elementPosition.bottom >= 0;
+        
+                if (!isElementVisible) {
+                    setIsAtTop(false);
+                }else{
+                    setIsAtTop(true);
+                }
+
+            }
+        }
   
-      // Ajoute un écouteur d'événement pour le scroll
-      window.addEventListener('scroll', handleScroll);
-  
-      // Nettoie l'écouteur d'événement lors du démontage du composant
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
+        // Ajoute un écouteur d'événement pour le scroll
+        window.addEventListener('scroll', handleScroll);
+    
+        // Nettoie l'écouteur d'événement lors du démontage du composant
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };    
     }, []);
 
 
@@ -29,8 +39,8 @@ const Navbar = () => {
     return (
         <>
             <Menu isOpen={isOpen} setState={setIsOpen} />
-            <nav className="w-full fixed left-0 z-[888] top-5">
-                <div className={"flex items-center gap-5 px-[21px] rounded-full py-4 text-center w-fit my-0 mx-auto transition-all duration-1000"} style={{background:"black", transform : `translate(0px,${isAtTop?"-150px":"0px"})`}}>
+            <nav className="w-full fixed z-[888] left-0 top-5">
+                <div className={"flex items-center gap-5 px-[21px] rounded-full py-4 text-center w-fit my-0 mx-auto transition-all duration-500"} style={{background:"black", transform : `translate(0px,${isAtTop?"-150px":"0px"})`}}>
                     <a href="/" className="">
                         <img src="https://www.fundamental.bg/logo-white.svg" alt="fundamental-logo" />
                     </a>
@@ -45,7 +55,7 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            <nav className="absolute left-0 py-6 w-full transition-all duration-300 z-[900] lg:px-10 top-5">
+            <nav ref={elementRef} className="absolute left-0 py-6 w-full transition-all duration-300 z-[900] lg:px-10 top-5">
                 <div className="container mx-auto items-center justify-between flex px-5">
                     <a href="/" className="">
                         <img src="https://www.fundamental.bg/logo-white.svg" alt="fundamental-logo" />
@@ -59,12 +69,22 @@ const Navbar = () => {
                         </li>
                         <li>
                             <a className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-[#3EC091]" href="#">
-                                Project
+                                Projects
                             </a>
                         </li>
                         <li>
                             <a className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-[#3EC091]" href="#">
-                                About
+                                About Me
+                            </a>
+                        </li>
+                        <li>
+                            <a className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-[#3EC091]" href="#">
+                                My Process
+                            </a>
+                        </li>
+                        <li>
+                            <a className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-[#3EC091]" href="#">
+                                Services
                             </a>
                         </li>
                         <li>

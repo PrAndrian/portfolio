@@ -52,16 +52,16 @@ const Menu = ({isOpen,setState}) => {
                                 <a aria-current="page" href="/" className="router-link-active router-link-exact-active text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> Home </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/services" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> Services </a>
+                                <a href="/services" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> Projects </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/projects" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> Portfolio </a>
+                                <a href="/projects" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> About Me </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/about" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> About us </a>
+                                <a href="/about" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> Services </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/process" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> Our Process </a>
+                                <a href="/process" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> My Process </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
                                 <a href="/feed" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#3EC091] transition-all duration-300"> Feed </a>
