@@ -1,6 +1,18 @@
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 const Menu = ({isOpen,setState}) => {
+
+    useEffect(() => {
+        if (isOpen) {
+          // Ajoutez la classe pour masquer la barre de défilement
+          document.body.classList.add('hide-scroll');
+        } else {
+          // Supprimez la classe pour restaurer la barre de défilement
+          document.body.classList.remove('hide-scroll');
+        }
+      }, [isOpen]);
+
     const handleClose = () =>{
         setState(false)
     }
@@ -8,7 +20,7 @@ const Menu = ({isOpen,setState}) => {
     return (
         <>
             <div className='fixed w-full h-screen bg-green-500 z-[950] transition-all duration-500' style={{top:`${isOpen ? "0%" : "-100%"}`}}></div>
-            <nav className='fixed w-full h-screen p-10 bg-green-900 z-[999] transition-all duration-1000' style={{top:`${isOpen ? "0%" : "-100%"}`}}>
+            <nav className='background-menu fixed w-full h-screen p-10 z-[999] transition-all duration-1000' style={{top:`${isOpen ? "0%" : "-100%"}`}}>
                 <div className='container mx-auto flex flex-col justify-between h-full z-40 relative'>
                     <div className="flex items-center justify-between">
                         <a aria-current="page" href="/" className="router-link-active router-link-exact-active">
@@ -87,7 +99,16 @@ const Menu = ({isOpen,setState}) => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row items-start lg:items-center lg:justify-between xl:gap-y-5">
+                    <div>
+                        <a href="https://open.spotify.com/playlist/3SZXkFtrZmiPH4sPsBa2hq" rel="noopener noreferrer" target="blank" className="flex lg:hidden">
+                            <div className="mt-5 flex space-x-2.5 items-center border-2 border-gray-400 p-3 rounded-lg place-self-stretch transition-all duration-300 hover:border-[#3EC091] group">
+                                <div className="text-xl text-white font-visby"> Listen to our vibes. </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+
+                    <div className="flex  flex-col lg:flex-row items-start lg:items-center lg:justify-between xl:gap-y-5">
                         <a href="mailto:hello@fundamental.bg" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#3EC091] transition-all duration-300"> hello@fundamental.bg </a>
                         <a href="tel:+359895697410" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#3EC091] transition-all duration-300"> +359 895 69 74 10 </a>
                         <div className="grid grid-cols-5 gap-x-7 items-end">

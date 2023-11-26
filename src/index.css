@@ -6,6 +6,24 @@
   background-image: url("https://www.fundamental.bg/img/artboard.avif");
 }
 
+.background-menu:after {
+  content:'';
+  position:absolute;;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.fundamental.bg/img/artboard.avif");
+  background-size: cover;
+  filter: brightness(25%);
+  backdrop-filter: brightness(25%);
+  z-index: -1;
+}
+
+.hide-scroll {
+  overflow-y: hidden;
+}
+
 .rightToLeft{
   animation: rightToLeft 10s infinite linear;
 }
