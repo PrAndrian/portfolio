@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bckg-fundamental{
-  background-image: url("https://www.fundamental.bg/img/artboard.avif");
+  background-image: url("./assets/main-background.avif");
 }
 
 .background-menu:after {
@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://www.fundamental.bg/img/artboard.avif");
+  background-image: url("./assets/main-background.avif");
   background-size: cover;
   filter: brightness(25%);
   backdrop-filter: brightness(25%);
