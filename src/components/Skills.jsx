@@ -19,8 +19,7 @@ const Skills = () => {
               />
             )}
             <SkillCard 
-                tag={""}
-                title={"Let's Chat"} 
+                title={"Interested ?"} 
                 description={"If you're intrigued by my skill set, let's have a chat! I'm enthusiastic about discussing how my expertise in frontend web development, particularly in JavaScript, could contribute to and elevate your projects. Let's connect and explore the possibilities together!"}
               />
           </div>
