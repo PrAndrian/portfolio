@@ -19,7 +19,7 @@ const Menu = ({isOpen,setState}) => {
 
     return (
         <>
-            <div className='fixed w-full h-screen bg-green-500 z-[950] transition-all duration-500' style={{top:`${isOpen ? "0%" : "-100%"}`}}></div>
+            <div className='fixed w-full h-screen z-[950] transition-all duration-500' style={{top:`${isOpen ? "0%" : "-100%"}`,backgroundColor:"#5E17EB"}}></div>
             <nav className='background-menu fixed w-full h-screen p-10 z-[999] transition-all duration-1000' style={{top:`${isOpen ? "0%" : "-100%"}`}}>
                 <div className='container mx-auto flex flex-col justify-between h-full z-40 relative'>
                     <div className="flex items-center justify-between">
