@@ -1,6 +1,8 @@
 import { useState,useEffect, useRef } from "react"
 import Menu from "./Menu";
 import Logo from "./Logo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     const [isAtTop, setIsAtTop] = useState(true);
@@ -49,9 +51,7 @@ const Navbar = () => {
                         Start our journey
                     </button>
                     <a className="cursor-pointer" onClick={handleOpenMenu}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 hover:text-[#5E17EB] transition-all duration-300 text-white">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-                        </svg>
+                        <FontAwesomeIcon icon={faBars} className="w-8 h-8 hover:text-[#5E17EB] transition-all duration-300 text-white"/>
                     </a>
                 </div>
             </nav>

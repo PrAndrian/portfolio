@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Logo from "./Logo"
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
   return (
@@ -48,13 +50,21 @@ const Footer = () => {
                     <a href="mailto:princy.workspace@gmail.com" rel="noopener noreferrer" className="hover:text-[#5E17EB] transition-all duration-300">princy.workspace@gmail.com</a>
                     <a href="tel:+33663546522" rel="noopener noreferrer" className="hover:text-[#5E17EB] transition-all duration-300">+33 6 63 54 65 22</a>
                     <div className="grid grid-cols-6">
-                        <a href="https://www.linkedin.com/in/princy-and/" rel="noopener noreferrer" target="blank" className="hover:text-[#5E17EB] transition-all duration-300">Linkedin</a>
-                        <a href="https://github.com/PrAndrian" rel="noopener noreferrer" target="blank" className="hover:text-[#5E17EB] transition-all duration-300">GitHub</a>
+                        <a href="https://www.linkedin.com/in/princy-and/" rel="noopener noreferrer" target="blank">
+                            <FontAwesomeIcon icon={faLinkedin} className='w-8 h-8 text-white hover:text-[#5E17EB] transition-all duration-300' />
+                        </a>
+                        <a href="https://github.com/PrAndrian" rel="noopener noreferrer" target="blank">
+                            <FontAwesomeIcon icon={faGithub} className='w-8 h-8 text-white hover:text-[#5E17EB] transition-all duration-300'/>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div className="container mx-auto border-t border-gray-800 py-5 px-5 mt-10"><div className="flex flex-col lg:flex-row lg:items-center lg:justify-between text-white space-y-5 lg:space-y-0 fade-in-fa"><div className="flex-1 flex flex-col lg:flex-row lg:items-center lg:space-x-5 space-y-2.5 lg:space-y-0"><a href="/cookie-policy" className="hover:text-[#5E17EB] transition-all duration-300"> Cookie Policy </a><a href="/terms-of-use" className="hover:text-[#5E17EB] transition-all duration-300"> Terms of use </a><a href="/privacy-policy" className="hover:text-[#5E17EB] transition-all duration-300"> Privacy Policy</a></div><p className="flex-1 prose lg:text-right text-white"> © 2016 - 2023 All rights reserved. Fundamental Studio Ltd. </p></div></div>
+        <div className="container mx-auto border-t border-gray-800 mt-10">
+            <div className="flex items-center justify-start text-white fade-in-fa mt-5">
+                <p className="prose lg:text-right text-white"> © 2023 All rights reserved. Princy And. </p>
+            </div>
+        </div>
     </footer>
   )
 }

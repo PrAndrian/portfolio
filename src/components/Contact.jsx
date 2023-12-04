@@ -1,3 +1,6 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 const Contact = () => {
   return (
     <div className="bckg-fundamental bg-cover bg-center py-40 mt-20" >
@@ -10,9 +13,7 @@ const Contact = () => {
             </p>
             <a href="/start-a-project" className="mx-auto text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 mr-auto mt-4 hover:opacity-80 group fade-in-fast">
                 <span>Start a project</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="rotate-45 w-5 h-5 group-hover:rotate-0 transition-all duration-300">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-                </svg>
+                <FontAwesomeIcon icon={faArrowRight}  className='w-5 h-5 group-hover:-rotate-45 transition-all duration-300'/>
             </a>
         </div>
     </div>

@@ -1,3 +1,6 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 const About = () => {
   return (
     <section id="about" className="py-20 scrollable-wrapper px-5 lg:px-10 xl:px-0">
@@ -16,9 +19,7 @@ const About = () => {
                     </p>
                     <a href="#about" className="text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 mr-auto mt-4 hover:opacity-80" >
                         <span >Let&apos;s chat!</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5" >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" ></path>
-                        </svg>
+                        <FontAwesomeIcon icon={faArrowRight} className="w-5 h-5 -rotate-45"/>
                     </a>
                 </div>
                 <div style={{backgroundImage: `image-set(

@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
 
 const SkillCard = ({title,description,tag}) => {
@@ -20,7 +22,7 @@ const SkillCard = ({title,description,tag}) => {
         {!tag ?
             <button className="bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold items-center space-x-2 group w-40 flex z-20">
                 <span>Let&apos;s chat!</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 group-hover:-rotate-45 transition-all duration-300"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+                <FontAwesomeIcon icon={faArrowRight}  className="w-5 h-5 group-hover:-rotate-45 transition-all duration-300"/>
             </button>
             :
             <div>

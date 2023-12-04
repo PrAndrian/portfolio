@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import Logo from './Logo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight, faX } from '@fortawesome/free-solid-svg-icons';
 
 const Menu = ({isOpen,setState}) => {
 
@@ -30,20 +33,15 @@ const Menu = ({isOpen,setState}) => {
                         <div className="space-x-10 items-center hidden lg:flex">
                             <a href="/start-a-project" className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">
                                 <span>Start a project</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 group-hover:-rotate-45 transition-all duration-300">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                                </svg>
+                                <FontAwesomeIcon icon={faArrowRight}  className='w-5 h-5 group-hover:-rotate-45 transition-all duration-300'/>
+
                             </a>
                             <a onClick={handleClose} >
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
+                                <FontAwesomeIcon icon={faX} className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300"/>
                             </a>
                         </div>
                         <a className="lg:hidden" onClick={handleClose} >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
+                            <FontAwesomeIcon icon={faX} className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300"/>
                         </a>
                     </div>
 
@@ -64,9 +62,7 @@ const Menu = ({isOpen,setState}) => {
                             <li className="-translate-y-[15px] opacity-0 blur-md flex lg:hidden" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
                                 <a href="/start-a-project" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold group flex items-center gap-x-2.5">
                                     <span className="group-hover:text-[#5E17EB] transition-all duration-300"> Start a project </span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7 -rotate-45 mt-1 group-hover:text-[#5E17EB] transition-all duration-300">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                                    </svg>
+                                    <FontAwesomeIcon icon={faArrowRight}  className='className="w-7 h-7 -rotate-45 mt-1 group-hover:text-[#5E17EB] transition-all duration-300"'/>
                                 </a>
                             </li>
                         </ul>
@@ -97,7 +93,7 @@ const Menu = ({isOpen,setState}) => {
                     <div>
                         <a href="https://open.spotify.com/playlist/3SZXkFtrZmiPH4sPsBa2hq" rel="noopener noreferrer" target="blank" className="flex lg:hidden">
                             <div className="mt-5 flex space-x-2.5 items-center border-2 border-gray-400 p-3 rounded-lg place-self-stretch transition-all duration-300 hover:border-[#5E17EB] group">
-                                <div className="text-xl text-white font-visby"> Listen to our vibes. </div>
+                                <div className="text-xl text-white font-visby"> Listen to my vibes. </div>
                             </div>
                         </a>
                     </div>
@@ -107,15 +103,11 @@ const Menu = ({isOpen,setState}) => {
                         <a href="mailto:princy.workspace@gmail.com" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300">princy.workspace@gmail.com</a>
                         <a href="tel:+33663546522" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300"> +33 6 63 54 65 22 </a>
                         <div className="grid grid-cols-2 gap-x-7 items-end">
-                            <a href="https://www.linkedin.com/in/princy-and/" rel="noopener noreferrer" target="blank" className="hover:opacity-80 transition-all duration-300">
-                                <span className='hover:opacity-80 transition-all duration-300 text-white'>
-                                    Linkedin
-                                </span> 
+                            <a href="https://www.linkedin.com/in/princy-and/" rel="noopener noreferrer" target="blank">
+                                <FontAwesomeIcon icon={faLinkedin} className='w-8 h-8 text-white hover:text-[#5E17EB] transition-all duration-300' />
                             </a>
-                            <a href="https://github.com/PrAndrian" rel="noopener noreferrer" target="blank" className="hover:opacity-80 transition-all duration-300">
-                                <span className='hover:opacity-80 transition-all duration-300 text-white'>
-                                    GitHub
-                                </span>
+                            <a href="https://github.com/PrAndrian" rel="noopener noreferrer" target="blank">
+                                <FontAwesomeIcon icon={faGithub} className='w-8 h-8 text-white hover:text-[#5E17EB] transition-all duration-300'/>
                             </a>
                         </div>
                     </div>  
