@@ -35,6 +35,11 @@
   -webkit-text-fill-color: #fff;
 }
 
+.rollingTextDark{
+  -webkit-text-stroke-width : 1px;
+  -webkit-text-fill-color: #5E17EB;
+}
+
 @keyframes rightToLeft {
   form{
     transform: translateX(0%);

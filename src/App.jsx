@@ -1,18 +1,10 @@
-import Contact from "./components/Contact"
-import About from "./components/About"
-import Hero from "./components/Hero"
-import Projects from "./components/Projects"
-import Skills from "./components/Skills"
+import Home from "./pages/Home"
+// import Project from "./pages/Project"
 
 function App() {
   return (
-    <>
-      <Hero/>
-      <Projects/>
-      <About/>
-      <Skills/>
-      <Contact/>
-    </>
+    <Home/>
+    // <Project/>
   )
 }
 
