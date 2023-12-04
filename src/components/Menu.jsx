@@ -99,7 +99,7 @@ const Menu = ({isOpen,setState}) => {
                     </div>
                     
 
-                    <div className="flex  flex-col lg:flex-row items-start lg:items-center lg:justify-between xl:gap-y-5">
+                    <div className="flex  flex-col lg:flex-row items-start lg:items-center lg:justify-between xl:gap-y-5 space-y-4 lg:space-y-0">
                         <a href="mailto:princy.workspace@gmail.com" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300">princy.workspace@gmail.com</a>
                         <a href="tel:+33663546522" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300"> +33 6 63 54 65 22 </a>
                         <div className="grid grid-cols-2 gap-x-7 items-end">
