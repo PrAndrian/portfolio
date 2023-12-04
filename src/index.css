@@ -20,8 +20,9 @@
   z-index: -1;
 }
 
-.hide-scroll {
-  overflow-y: hidden;
+/* width */
+::-webkit-scrollbar {
+  width: 0;
 }
 
 .rightToLeft{

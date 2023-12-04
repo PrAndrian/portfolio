@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="py-20 scrollable-wrapper px-5 lg:px-10 xl:px-0">
+    <section id="about" className="py-20 scrollable-wrapper px-5 lg:px-10 xl:px-0">
         <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 space-y-5 lg:space-y-0 lg:space-x-5 xl:space-x-0 xl:px-5 items-center" >
                 <div className="flex flex-col space-y-5 lg:space-y-7 items-start" >

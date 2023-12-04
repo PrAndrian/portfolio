@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard"
 
 const Projects = () => {
   return (
-    <section className='bg-white py-10 lg:py-20 px-5'>
+    <section id="projects" className='bg-white py-10 lg:py-20 px-5'>
         <div className="container mx-auto">
             <header className="flex flex-row items-center lg:space-x-10 lg:space-y-5 justify-between mb-10">
                 <h2 className="text-3xl lg:text-6xl font-bold flex-shrink">Projects</h2>

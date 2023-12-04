@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
+import Logo from './Logo';
 
 const Menu = ({isOpen,setState}) => {
 
@@ -24,7 +25,7 @@ const Menu = ({isOpen,setState}) => {
                 <div className='container mx-auto flex flex-col justify-between h-full z-40 relative'>
                     <div className="flex items-center justify-between">
                         <a aria-current="page" href="/" className="router-link-active router-link-exact-active">
-                        <img src="https://www.fundamental.bg/logo-white.svg" alt="fundamental-logo" />
+                            <Logo/>
                         </a>
                         <div className="space-x-10 items-center hidden lg:flex">
                             <a href="/start-a-project" className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">
@@ -52,19 +53,13 @@ const Menu = ({isOpen,setState}) => {
                                 <a aria-current="page" href="/" className="router-link-active router-link-exact-active text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Home </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/services" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Projects </a>
+                                <a href="#projects" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Projects </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/projects" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> About Me </a>
+                                <a href="#about" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> About Me </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/about" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Services </a>
-                            </li>
-                            <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/process" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> My Process </a>
-                            </li>
-                            <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/feed" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Feed </a>
+                                <a href="#skills" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Skills </a>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md flex lg:hidden" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
                                 <a href="/start-a-project" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold group flex items-center gap-x-2.5">
@@ -109,44 +104,18 @@ const Menu = ({isOpen,setState}) => {
                     
 
                     <div className="flex  flex-col lg:flex-row items-start lg:items-center lg:justify-between xl:gap-y-5">
-                        <a href="mailto:hello@fundamental.bg" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300"> hello@fundamental.bg </a>
-                        <a href="tel:+359895697410" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300"> +359 895 69 74 10 </a>
-                        <div className="grid grid-cols-5 gap-x-7 items-end">
-                            <a href="https://www.facebook.com/studio.fundamental" rel="noopener noreferrer" target="blank" className="hover:opacity-80 transition-all duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style={{fill:"#000000"}}>
-                                    <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode:"normal"}}>
-                                        <g transform="scale(8.53333,8.53333)">
-                                            <path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z"></path>
-                                        </g>
-                                    </g>
-                                </svg>
+                        <a href="mailto:princy.workspace@gmail.com" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300">princy.workspace@gmail.com</a>
+                        <a href="tel:+33663546522" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300"> +33 6 63 54 65 22 </a>
+                        <div className="grid grid-cols-2 gap-x-7 items-end">
+                            <a href="https://www.linkedin.com/in/princy-and/" rel="noopener noreferrer" target="blank" className="hover:opacity-80 transition-all duration-300">
+                                <span className='hover:opacity-80 transition-all duration-300 text-white'>
+                                    Linkedin
+                                </span> 
                             </a>
-                            <a href="https://www.facebook.com/studio.fundamental" rel="noopener noreferrer" target="blank" className="hover:opacity-80 transition-all duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style={{fill:"#000000"}}>
-                                    <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode:"normal"}}>
-                                        <g transform="scale(8.53333,8.53333)">
-                                            <path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z"></path>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </a>
-                            <a href="https://www.facebook.com/studio.fundamental" rel="noopener noreferrer" target="blank" className="hover:opacity-80 transition-all duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style={{fill:"#000000"}}>
-                                    <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode:"normal"}}>
-                                        <g transform="scale(8.53333,8.53333)">
-                                            <path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z"></path>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </a>
-                            <a href="https://www.facebook.com/studio.fundamental" rel="noopener noreferrer" target="blank" className="hover:opacity-80 transition-all duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style={{fill:"#000000"}}>
-                                    <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode:"normal"}}>
-                                        <g transform="scale(8.53333,8.53333)">
-                                            <path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z"></path>
-                                        </g>
-                                    </g>
-                                </svg>
+                            <a href="https://github.com/PrAndrian" rel="noopener noreferrer" target="blank" className="hover:opacity-80 transition-all duration-300">
+                                <span className='hover:opacity-80 transition-all duration-300 text-white'>
+                                    GitHub
+                                </span>
                             </a>
                         </div>
                     </div>  

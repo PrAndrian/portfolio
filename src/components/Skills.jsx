@@ -3,7 +3,7 @@ import {skills} from '../mockData'
 
 const Skills = () => {
   return (
-    <section className='bg-white py-5 px-5 lg:py-0 xl:py-20 lg:px-10 xl:px-5'>
+    <section id="skills" className='bg-white py-5 px-5 lg:py-0 xl:py-20 lg:px-10 xl:px-5'>
         <div className='container mx-auto'>
           <div className="flex items-center space-x-10">
             <h2 className="text-3xl lg:text-5xl xl:text-6xl font-bold flex-shrink text-motion"> My Strength </h2>
