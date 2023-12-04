@@ -36,7 +36,7 @@ const SkillCard = ({title,description,tag}) => {
 SkillCard.propTypes  = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
+    tag: PropTypes.string,
 }
 
 export default SkillCard

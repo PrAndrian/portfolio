@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Logo from "./Logo"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 const Footer = () => {
   return (
@@ -15,9 +16,7 @@ const Footer = () => {
                 </div>
                 <a href="/start-a-project" className="fade-in-fast cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group mt-3">
                     <span>Get in touch</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 group-hover:-rotate-45 transition-all duration-300">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                    </svg>
+                    <FontAwesomeIcon icon={faArrowRight}  className='w-5 h-5 group-hover:-rotate-45 transition-all duration-300'/>
                 </a>
             </div>
         </div>
@@ -29,7 +28,7 @@ const Footer = () => {
                         <Logo className="h-5"/>
                     </a>
                     <p className="mt-5 text-base text-white"> 
-                    I&apos;m a seasoned French web developer fluent in Javascript, passionate about crafting vibrant digital stories and turning ideas into captivating online experiences.
+                        I&apos;m a seasoned French web developer fluent in Javascript, passionate about crafting vibrant digital stories and turning ideas into captivating online experiences.
                     </p>
                 </div>
                 <div className="flex flex-col space-y-5 text-white">
