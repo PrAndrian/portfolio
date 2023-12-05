@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import Logo from "./Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Navbar = () => {
     const [isAtTop, setIsAtTop] = useState(true);
@@ -44,47 +45,47 @@ const Navbar = () => {
             <Menu isOpen={isOpen} setState={setIsOpen} />
             <nav className="w-full fixed z-[888] left-0 top-5">
                 <div className={"flex items-center gap-5 px-[21px] rounded-full py-4 text-center w-fit my-0 mx-auto transition-all duration-500"} style={{background:"black", transform : `translate(0px,${isAtTop?"-150px":"0px"})`}}>
-                    <a href="/" className="">
+                    <Link to="/">
                         <Logo/>
-                    </a>
-                    <button className="py-2 px-4 rounded bg-[#5E17EB] text-lg font-semibold 2xl:text-xl hidden lg:block xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  href="#">
+                    </Link>
+                    <button className="py-2 px-4 rounded bg-[#5E17EB] text-lg font-semibold 2xl:text-xl hidden lg:block xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  to="#">
                         Start our journey
                     </button>
-                    <a className="cursor-pointer" onClick={handleOpenMenu}>
+                    <button className="cursor-pointer" onClick={handleOpenMenu}>
                         <FontAwesomeIcon icon={faBars} className="w-8 h-8 hover:text-[#5E17EB] transition-all duration-300 text-white"/>
-                    </a>
+                    </button>
                 </div>
             </nav>
 
             <nav ref={elementRef} className="absolute left-0 py-6 w-full transition-all duration-300 z-[900] lg:px-10 top-5">
                 <div className="container mx-auto items-center justify-between flex px-5">
-                    <a href="/" className="">
+                    <Link to="/" className="">
                         <Logo/>
-                    </a>
+                    </Link>
                     
                     <ul className="text-lg flex items-center space-x-10 text-white hidden lg:flex">
                         <li>
-                            <a className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-indigo-500" href="/">
+                            <Link to="/" className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-indigo-500" >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-indigo-500" href="/#projects">
+                            <Link to="/#projects" className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-indigo-500" >
                                 Projects
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-indigo-500" href="/#about">
+                            <Link to="/#about" className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-indigo-500">
                                 About Me
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-indigo-500" href="/#skills">
+                            <Link to="/#skills" className="text-lg 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:text-indigo-500">
                                 Skills
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <button className="py-2 px-4 rounded bg-[#5E17EB] text-lg font-semibold 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  href="#">
+                            <button className="py-2 px-4 rounded bg-[#5E17EB] text-lg font-semibold 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  to="#">
                                 Start our journey
                             </button>
                         </li>

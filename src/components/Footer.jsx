@@ -14,10 +14,10 @@ const Footer = () => {
                         Let s build something great together 
                     </div>
                 </div>
-                <a href="/start-a-project" className="fade-in-fast cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group mt-3">
+                <button className="fade-in-fast cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group mt-3">
                     <span>Get in touch</span>
                     <FontAwesomeIcon icon={faArrowRight}  className='w-5 h-5 group-hover:-rotate-45 transition-all duration-300'/>
-                </a>
+                </button>
             </div>
         </div>
         <div className="container mx-auto h-px bg-gray-800 my-14"></div>

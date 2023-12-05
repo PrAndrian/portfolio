@@ -4,6 +4,7 @@ import Logo from './Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight, faX } from '@fortawesome/free-solid-svg-icons';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Menu = ({isOpen,setState}) => {
 
@@ -27,43 +28,42 @@ const Menu = ({isOpen,setState}) => {
             <nav className='background-menu fixed w-full h-screen p-10 z-[999] transition-all duration-1000' style={{top:`${isOpen ? "0%" : "-100%"}`}}>
                 <div className='container mx-auto flex flex-col justify-between h-full z-40 relative'>
                     <div className="flex items-center justify-between">
-                        <a aria-current="page" href="/" className="router-link-active router-link-exact-active">
+                        <Link aria-current="page" to="/" className="router-link-active router-link-exact-active">
                             <Logo/>
-                        </a>
+                        </Link>
                         <div className="space-x-10 items-center hidden lg:flex">
-                            <a href="/start-a-project" className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">
+                            <button to="/start-a-project" className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">
                                 <span>Start a project</span>
                                 <FontAwesomeIcon icon={faArrowRight}  className='w-5 h-5 group-hover:-rotate-45 transition-all duration-300'/>
-
-                            </a>
-                            <a onClick={handleClose} >
+                            </button>
+                            <Link onClick={handleClose} >
                                 <FontAwesomeIcon icon={faX} className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300"/>
-                            </a>
+                            </Link>
                         </div>
-                        <a className="lg:hidden" onClick={handleClose} >
+                        <Link className="lg:hidden" onClick={handleClose} >
                             <FontAwesomeIcon icon={faX} className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300"/>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
                         <ul className="flex flex-col space-y-5">
                             <li className="-translate-y-[15px] opacity-0 blur-md hidden lg:flex" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a aria-current="page" href="/" className="router-link-active router-link-exact-active text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Home </a>
+                                <Link aria-current="page" onClick={handleClose}  to="/" className="router-link-active router-link-exact-active text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Home </Link>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/#projects" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Projects </a>
+                                <Link to="/#projects" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Projects </Link>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/#about" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> About Me </a>
+                                <Link to="/#about" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> About Me </Link>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="/#skills" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Skills </a>
+                                <Link to="/#skills" onClick={handleClose} className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold hover:text-[#5E17EB] transition-all duration-300"> Skills </Link>
                             </li>
                             <li className="-translate-y-[15px] opacity-0 blur-md flex lg:hidden" style={{translate: "none", rotate: "none", scale: "none", filter: "blur(0px)", transform: "translate(0px, 15px)", opacity: 1}}>
-                                <a href="#" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold group flex items-center gap-x-2.5">
+                                <Link to="#" className="text-3xl xl:text-5xl 2xl:text-6xl text-white font-visby font-bold group flex items-center gap-x-2.5">
                                     <span className="group-hover:text-[#5E17EB] transition-all duration-300"> Start a project </span>
                                     <FontAwesomeIcon icon={faArrowRight}  className='className="w-7 h-7 -rotate-45 mt-1 group-hover:text-[#5E17EB] transition-all duration-300"'/>
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                         <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 lg:space-x-5 space-y-2.5 lg:space-y-0">
@@ -76,7 +76,7 @@ const Menu = ({isOpen,setState}) => {
                                 <div className="text-4xl text-white font-visby font-bold lg:mt-32">23:02</div>
                                 <div className="text-xl text-white font-visby mt-2">Europe/Sofia</div>
                             </div>
-                            <a href="https://open.spotify.com/playlist/3SZXkFtrZmiPH4sPsBa2hq" rel="noopener noreferrer" target="blank" className="" >
+                            <Link to="https://open.spotify.com/playlist/3SZXkFtrZmiPH4sPsBa2hq" rel="noopener noreferrer" target="blank" className="" >
                                 <div className="border-2 border-gray-400 p-7 rounded-lg w-80 h-auto place-self-stretch transition-all duration-300 hover:opacity-70 items-start flex flex-col justify-between">
                                     <div className="bg-[#5E17EB] rounded-full p-3 flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 text-white">
@@ -86,29 +86,29 @@ const Menu = ({isOpen,setState}) => {
                                     <div className="text-4xl text-white font-visby font-bold mt-32"> Fundamental </div>
                                     <div className="text-xl text-white font-visby mt-2"> Our playlist on Spotify.</div>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
                     <div>
-                        <a href="https://open.spotify.com/playlist/3SZXkFtrZmiPH4sPsBa2hq" rel="noopener noreferrer" target="blank" className="flex lg:hidden">
+                        <Link to="https://open.spotify.com/playlist/3SZXkFtrZmiPH4sPsBa2hq" rel="noopener noreferrer" target="blank" className="flex lg:hidden">
                             <div className="mt-5 flex space-x-2.5 items-center border-2 border-gray-400 p-3 rounded-lg place-self-stretch transition-all duration-300 hover:border-[#5E17EB] group">
                                 <div className="text-xl text-white font-visby"> Listen to my vibes. </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     
 
                     <div className="flex  flex-col lg:flex-row items-start lg:items-center lg:justify-between xl:gap-y-5 space-y-4 lg:space-y-0">
-                        <a href="mailto:princy.workspace@gmail.com" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300">princy.workspace@gmail.com</a>
-                        <a href="tel:+33663546522" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300"> +33 6 63 54 65 22 </a>
+                        <Link to="mailto:princy.workspace@gmail.com" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300">princy.workspace@gmail.com</Link>
+                        <Link to="tel:+33663546522" rel="noopener noreferrer" className="text-white font-bold font-visby text-xl hover:text-[#5E17EB] transition-all duration-300"> +33 6 63 54 65 22 </Link>
                         <div className="grid grid-cols-2 gap-x-7 items-end">
-                            <a href="https://www.linkedin.com/in/princy-and/" rel="noopener noreferrer" target="blank">
+                            <Link to="https://www.linkedin.com/in/princy-and/" rel="noopener noreferrer" target="blank">
                                 <FontAwesomeIcon icon={faLinkedin} className='w-8 h-8 text-white hover:text-[#5E17EB] transition-all duration-300' />
-                            </a>
-                            <a href="https://github.com/PrAndrian" rel="noopener noreferrer" target="blank">
+                            </Link>
+                            <Link to="https://github.com/PrAndrian" rel="noopener noreferrer" target="blank">
                                 <FontAwesomeIcon icon={faGithub} className='w-8 h-8 text-white hover:text-[#5E17EB] transition-all duration-300'/>
-                            </a>
+                            </Link>
                         </div>
                     </div>  
                 </div>

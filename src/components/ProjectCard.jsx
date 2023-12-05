@@ -1,6 +1,7 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({
     title,
@@ -8,6 +9,7 @@ const ProjectCard = ({
     columns,
     widthInfo,
     year,
+    id,
 }) => {
   return (
     <div 
@@ -22,7 +24,7 @@ const ProjectCard = ({
             transform: "translate(0px, 0px)"
         }}
     >
-        <a href="#">
+        <Link to={`/project/${id}`} >
             <div className={`absolute rounded-xl p-5 xl:p-10 bg-white bottom-5 right-5 flex xl:flex-col items-center xl:items-start  justify-between group has-motion w-[87.5%] ${widthInfo}`}>
                 <div className='justify-between items-center hidden xl:flex w-full'>
                     <div className="flex items-center justify-between w-full">
@@ -45,12 +47,13 @@ const ProjectCard = ({
                     <FontAwesomeIcon icon={faArrowRight}  className='w-5 h-5 group-hover:-rotate-45 transition-all duration-300'/>
                 </button>
             </div>
-        </a>
+        </Link>
     </div>
   )
 }
 
 ProjectCard.propTypes  = {
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     year: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,

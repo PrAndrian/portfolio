@@ -25,9 +25,7 @@ const SkillCard = ({title,description,tag}) => {
                 <FontAwesomeIcon icon={faArrowRight}  className="w-5 h-5 group-hover:-rotate-45 transition-all duration-300"/>
             </button>
             :
-            <div>
-
-            </div>
+            <div></div>
         } 
     </div>
   )
