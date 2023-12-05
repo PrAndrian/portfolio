@@ -32,17 +32,17 @@ const Menu = ({isOpen,setState}) => {
                             <Logo/>
                         </Link>
                         <div className="space-x-10 items-center hidden lg:flex">
-                            <button to="/start-a-project" className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">
+                            <button className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">
                                 <span>Start a project</span>
                                 <FontAwesomeIcon icon={faArrowRight}  className='w-5 h-5 group-hover:-rotate-45 transition-all duration-300'/>
                             </button>
-                            <Link onClick={handleClose} >
+                            <button onClick={handleClose} >
                                 <FontAwesomeIcon icon={faX} className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300"/>
-                            </Link>
+                            </button>
                         </div>
-                        <Link className="lg:hidden" onClick={handleClose} >
+                        <button className="lg:hidden" onClick={handleClose} >
                             <FontAwesomeIcon icon={faX} className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300"/>
-                        </Link>
+                        </button>
                     </div>
 
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
