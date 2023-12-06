@@ -48,7 +48,7 @@ const Navbar = () => {
                     <Link to="/">
                         <Logo/>
                     </Link>
-                    <button className="py-2 px-4 rounded bg-[#5E17EB] text-lg font-semibold 2xl:text-xl hidden lg:block xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  to="#">
+                    <button className="py-2 px-4 rounded-full bg-[#5E17EB] text-lg font-semibold 2xl:text-xl hidden lg:block xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  to="#">
                         Start our journey
                     </button>
                     <button className="cursor-pointer" onClick={handleOpenMenu}>
