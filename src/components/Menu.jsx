@@ -7,6 +7,7 @@ import { faArrowRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Menu = ({isOpen,setState}) => {
+    const now = new Date(); 
 
     useEffect(() => {
         if (isOpen) {
@@ -73,25 +74,25 @@ const Menu = ({isOpen,setState}) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
-                                <div className="text-4xl text-white font-visby font-bold lg:mt-32">23:02</div>
-                                <div className="text-xl text-white font-visby mt-2">Europe/Sofia</div>
+                                <div className="text-4xl text-white font-visby font-bold lg:mt-32">{now.getHours()}:{now.getMinutes()}</div>
+                                <div className="text-xl text-white font-visby mt-2">Europe/France</div>
                             </div>
-                            <Link to="https://open.spotify.com/playlist/3SZXkFtrZmiPH4sPsBa2hq" rel="noopener noreferrer" target="blank" className="" >
+                            <Link to="https://open.spotify.com/playlist/143W2Bzlc6fvmPi5ragAT2" rel="noopener noreferrer" target="blank" className="" >
                                 <div className="border-2 border-gray-400 p-7 rounded-lg w-80 h-auto place-self-stretch transition-all duration-300 hover:opacity-70 items-start flex flex-col justify-between">
                                     <div className="bg-[#5E17EB] rounded-full p-3 flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 text-white">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"></path>
                                         </svg>
                                     </div>
-                                    <div className="text-4xl text-white font-visby font-bold mt-32"> Fundamental </div>
-                                    <div className="text-xl text-white font-visby mt-2"> Our playlist on Spotify.</div>
+                                    <div className="text-4xl text-white font-visby font-bold mt-32"> Songs </div>
+                                    <div className="text-xl text-white font-visby mt-2"> My playlist on Spotify.</div>
                                 </div>
                             </Link>
                         </div>
                     </div>
 
                     <div>
-                        <Link to="https://open.spotify.com/playlist/3SZXkFtrZmiPH4sPsBa2hq" rel="noopener noreferrer" target="blank" className="flex lg:hidden">
+                        <Link to="https://open.spotify.com/intl-fr/artist/1dABGukgZ8XKKOdd2rVSHM" rel="noopener noreferrer" target="blank" className="flex lg:hidden">
                             <div className="mt-5 flex space-x-2.5 items-center border-2 border-gray-400 p-3 rounded-lg place-self-stretch transition-all duration-300 hover:border-[#5E17EB] group">
                                 <div className="text-xl text-white font-visby"> Listen to my vibes. </div>
                             </div>
