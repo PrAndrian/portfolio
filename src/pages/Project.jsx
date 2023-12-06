@@ -11,16 +11,26 @@ const Project = () => {
   const {
     id,
     url,
-    title
+    title,
+    description,
+    company,
+    year,
+    images,
+    steps,
   } = projectData
 
   return (
     <>
       <HeroProject title={title} url={url}/>
-      <section className="bg-white py-5 lg:py-10 px-5">
-        <ProjectDescription/>
-        <ProjectImages/>
-        <ProjectSteps/>
+      <section className="bg-white py-5 lg:py-20 px-5">
+        <ProjectDescription 
+          title={title} 
+          description={description}
+          company={company} 
+          year={year} 
+        />
+        <ProjectImages images={images}/>
+        <ProjectSteps steps={steps}/>
         <ProjectRelated id={id}/>
         <ScrollRestoration />
       </section>

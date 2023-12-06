@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ProjectRelated = ({id}) => {
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto px-5'>
           <header className="flex flex-row items-center lg:space-x-10 lg:space-y-5 justify-between mb-10">
               <h2 className="text-3xl lg:text-6xl font-bold flex-shrink">See other projects</h2>
               <span className="flex-1 bg-gray-200 w-96 h-px hidden lg:flex"></span>
