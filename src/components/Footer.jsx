@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-x-10 xl:gap-x-20 px-5 space-y-10 lg:space-y-0">
                 <div>
                     <a aria-current="page" href="/" className="router-link-active router-link-exact-active">
-                        <Logo className="h-5"/>
+                        <Logo className="h-10"/>
                     </a>
                     <p className="mt-5 text-base text-white"> 
                         I&apos;m a seasoned French web developer fluent in Javascript, passionate about crafting vibrant digital stories and turning ideas into captivating online experiences.

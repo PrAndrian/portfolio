@@ -30,7 +30,7 @@ const Menu = ({isOpen,setState}) => {
                 <div className='container mx-auto flex flex-col justify-between h-full z-40 relative'>
                     <div className="flex items-center justify-between">
                         <Link aria-current="page" to="/" className="router-link-active router-link-exact-active">
-                            <Logo/>
+                            <Logo classNames="h-10"/>
                         </Link>
                         <div className="space-x-10 items-center hidden lg:flex">
                             <button className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">

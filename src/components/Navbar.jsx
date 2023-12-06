@@ -46,7 +46,7 @@ const Navbar = () => {
             <nav className="w-full fixed z-[888] left-0 top-5">
                 <div className={"flex items-center gap-5 px-[21px] rounded-full py-4 text-center w-fit my-0 mx-auto transition-all duration-500"} style={{background:"black", transform : `translate(0px,${isAtTop?"-150px":"0px"})`}}>
                     <Link to="/">
-                        <Logo/>
+                        <Logo classNames="h-10"/>
                     </Link>
                     <button className="py-2 px-4 rounded-full bg-[#5E17EB] text-lg font-semibold 2xl:text-xl hidden lg:block xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  to="#">
                         Start our journey
@@ -60,7 +60,7 @@ const Navbar = () => {
             <nav ref={elementRef} className="absolute left-0 py-6 w-full transition-all duration-300 z-[900] lg:px-10 top-5">
                 <div className="container mx-auto items-center justify-between flex px-5">
                     <Link to="/" className="">
-                        <Logo/>
+                        <Logo classNames="h-10"/>
                     </Link>
                     
                     <ul className="text-lg flex items-center space-x-10 text-white hidden lg:flex">
