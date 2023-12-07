@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Logo from './Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -7,9 +7,12 @@ import { faArrowRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Menu = ({isOpen,setState}) => {
-    const now = new Date(); 
+    const [currentTime, setCurrentTime] = useState(new Date());
 
     useEffect(() => {
+        const updateCurrentTime = () => {
+            setCurrentTime(new Date());
+          };
         if (isOpen) {
           // Ajoutez la classe pour masquer la barre de défilement
           document.body.classList.add('hide-scroll');
@@ -17,7 +20,19 @@ const Menu = ({isOpen,setState}) => {
           // Supprimez la classe pour restaurer la barre de défilement
           document.body.classList.remove('hide-scroll');
         }
-      }, [isOpen]);
+
+        // Mettez à jour l'heure toutes les secondes
+        const intervalId = setInterval(updateCurrentTime, 1000);
+
+        // Nettoyage de l'intervalle lorsque le composant est démonté
+        return () => clearInterval(intervalId);
+    }, [isOpen]);
+
+    // Obtenez l'heure et les minutes de la France
+    const franceTime = new Date(currentTime.toLocaleString('en-US', { timeZone: 'Europe/Paris' }));
+
+    const hours = franceTime.getHours();
+    const minutes = franceTime.getMinutes();
 
     const handleClose = () =>{
         setState(false)
@@ -74,7 +89,7 @@ const Menu = ({isOpen,setState}) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
-                                <div className="text-4xl text-white font-visby font-bold lg:mt-32">{now.getHours()}:{now.getMinutes()}</div>
+                                <div className="text-4xl text-white font-visby font-bold lg:mt-32">{hours}:{minutes < 10 ? `0${minutes}` : minutes}</div>
                                 <div className="text-xl text-white font-visby mt-2">Europe/France</div>
                             </div>
                             <Link to="https://open.spotify.com/playlist/143W2Bzlc6fvmPi5ragAT2" rel="noopener noreferrer" target="blank" className="" >
