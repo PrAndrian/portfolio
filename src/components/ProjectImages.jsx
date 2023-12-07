@@ -18,5 +18,5 @@ ProjectImages.propTypes  = {
   images:PropTypes.arrayOf(PropTypes.string.isRequired),
 }
 
-
+  
 export default ProjectImages
