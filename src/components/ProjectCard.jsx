@@ -10,6 +10,7 @@ const ProjectCard = ({
     widthInfo,
     year,
     id,
+    tags
 }) => {
   return (
     <div 
@@ -29,12 +30,11 @@ const ProjectCard = ({
                 <div className='justify-between items-center hidden xl:flex w-full'>
                     <div className="flex items-center justify-between w-full">
                         <div className='flex flex-wrap gap-2 pr-2'>
-                            <span className="px-3 py-1 rounded items-center bg-orange-600 text-white">
-                                UI &amp; UX
-                            </span>
-                            <span className="px-3 py-1 rounded items-center bg-purple-900 text-white">
-                                Development
-                            </span>
+                            {tags?.map((tag,i)=>
+                                <span key={i} className="px-3 py-1 rounded items-center text-white" style={{backgroundColor: tag.includes("X")? "orange":"purple"}}>
+                                    {tag}
+                                </span>
+                            )}
                         </div>
                         <p className='font-semibold'>{year}</p>
                     </div>
@@ -59,6 +59,7 @@ ProjectCard.propTypes  = {
     url: PropTypes.string.isRequired,
     columns: PropTypes.number.isRequired,
     widthInfo : PropTypes.string.isRequired,
+    tags : PropTypes.arrayOf(PropTypes.string),
 }
 
 export default ProjectCard

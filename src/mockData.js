@@ -38,7 +38,8 @@ export const projects= [
                 description : `
                 There are many apps that try to engage users to learn a language and to make them do a a lesson everyday, but they fail to organize their time and tasks and the user gets lost in translation. Literally. Our task is to make it as friendly and as easy to use with encouragements and personal touch and conversation in order for people to feel motivated to learn something new everyday` 
             }
-        ]
+        ],
+        tags : []
     },
     {
         id: "2",
@@ -71,7 +72,8 @@ export const projects= [
                 description : `
                 There are many apps that try to engage users to learn a language and to make them do a a lesson everyday, but they fail to organize their time and tasks and the user gets lost in translation. Literally. Our task is to make it as friendly and as easy to use with encouragements and personal touch and conversation in order for people to feel motivated to learn something new everyday` 
             }
-        ]
+        ],
+        tags : []
     },
     {
         id: "3",
@@ -104,7 +106,8 @@ export const projects= [
                 description : `
                 Transformed an underperforming e-commerce website, achieving a remarkable 249.38% ROI in 2023. This success was driven by a strategic overhaul that included design enhancements, user experience improvements, and SEO optimization. The integration of parapharmaceutical references through a webservice not only expanded the product catalog but also streamlined the customer's online shopping experience. These efforts collectively contributed to increased sales, improved customer satisfaction, and elevated the website's overall performance in the competitive market.` 
             }
-        ]
+        ],
+        tags : ["UX/UI design","Development"]
     },
 ]
 

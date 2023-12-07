@@ -13,13 +13,14 @@ const Projects = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                 {projects?.map((project)=>
                     <ProjectCard 
-                        key={project.id}
-                        id={project.id}
-                        title={project.title}
-                        year={project.year}
-                        url={project.url} 
+                        key={project?.id}
+                        id={project?.id}
+                        title={project?.title}
+                        year={project?.year}
+                        url={project?.url} 
                         columns={1}
-                        widthInfo={project.columns === 1 ? "lg:w-[92.5%]" : "lg:w-1/2"}
+                        widthInfo={project?.columns === 1 ? "lg:w-[92.5%]" : "lg:w-1/2"}
+                        tags={project?.tags}
                     />
                 )}
             </div>
