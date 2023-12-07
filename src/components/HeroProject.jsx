@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import ScrollDownIcon from "./ScrollIcon"
 
 const HeroProject = ({title,url}) => {
   return (
@@ -6,25 +7,25 @@ const HeroProject = ({title,url}) => {
         className="bg-cover bg-center bg-no-repeat h-screen flex flex-col items-center justify-center header"
         style={{backgroundImage: `url(${url})`}}
       >
-        <div className="brightness-50 h-screen bg-black w-full opacity-75 "></div>
+        <div className="brightness-50 h-screen bg-black w-full opacity-60 "></div>
         <h1 className="
             absolute
-            leading-tight 
+            text-white
             text-5xl 
             lg:text-[90px]
             xl:text-[120px]
             2xl:text-[140px]
             xl:max-w-8xl
             2xl:max-w-8xl
-            font-bold 
+            font-black 
             text-center 
-            text-white
             lg:space-x-7 
             transition-all duration-300
           "
         >
           {title}
         </h1>
+        <ScrollDownIcon/>
       </header>
   )
 }
