@@ -16,8 +16,8 @@ const SkillCard = ({title,description,tag}) => {
             <div></div>
         }
         <span className="text-3xl font-visby font-bold z-20">{title}</span>
-        <div className="z-20 h-40">
-            <p className="">{description}</p>
+        <div className="z-20 lg:h-40">
+            <p>{description}</p>
         </div>
         {!tag ?
             <button className="bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold items-center space-x-2 group w-40 flex z-20">
