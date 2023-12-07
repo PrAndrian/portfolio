@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const ProjectImages = ({images}) => {
   return (
-    <section  className="bg-white my-32 lg: px-5">
+    <section  className="bg-white my-32 lg:px-5">
     <div  className="lg:-rotate-6 px-5 lg:px-0">
       <div  className="grid grid-cols-1 lg:grid-cols-3 gap-x-24 gap-y-12 items-center justify-center">
         {images.map((image)=>
