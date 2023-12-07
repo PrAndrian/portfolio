@@ -4,10 +4,11 @@ import ProjectDescription from "../components/ProjectDescription";
 import ProjectImages from "../components/ProjectImages";
 import ProjectSteps from "../components/ProjectSteps";
 import ProjectRelated from "../components/ProjectRelated";
+import { useTitle } from "../hooks/useTitle";
 
 const Project = () => {
   const projectData = useLoaderData ();
-
+  
   const {
     id,
     url,
@@ -18,6 +19,8 @@ const Project = () => {
     images,
     steps,
   } = projectData
+
+  useTitle(`Project -${title}`);
 
   return (
     <>

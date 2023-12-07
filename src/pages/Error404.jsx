@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
+import { useTitle } from "../hooks/useTitle"
 
 const Error404 = () => {
+  useTitle('Page not found')
   return (
     <section className="h-screen w-screen flex flex-col justify-center items-center bg-black">
       <h1 className="text-[100px] font-bold text-white">

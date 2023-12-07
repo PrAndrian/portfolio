@@ -4,8 +4,10 @@ import About from "../components/About"
 import Skills from "../components/Skills"
 import Contact from "../components/Contact"
 import { ScrollRestoration } from "react-router-dom"
+import { useTitle } from "../hooks/useTitle"
 
 const Home = () => {
+  useTitle(`Princy And. - JavaScript developer`)
   return (
     <>
         <Hero/>
