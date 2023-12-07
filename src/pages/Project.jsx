@@ -18,6 +18,7 @@ const Project = () => {
     year,
     images,
     steps,
+    website,
   } = projectData
 
   useTitle(`Project -${title}`);
@@ -31,6 +32,7 @@ const Project = () => {
           description={description}
           company={company} 
           year={year} 
+          url={website}
         />
         <ProjectImages images={images}/>
         <ProjectSteps steps={steps}/>
