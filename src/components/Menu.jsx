@@ -29,7 +29,7 @@ const Menu = ({isOpen,setState}) => {
             <nav className='background-menu fixed w-full h-screen p-10 z-[999] transition-all duration-1000' style={{top:`${isOpen ? "0%" : "-200%"}`}}>
                 <div className='container mx-auto flex flex-col justify-between h-full z-40 relative'>
                     <div className="flex items-center justify-between">
-                        <Link aria-current="page" to="/" className="router-link-active router-link-exact-active">
+                        <Link onClick={handleClose}  aria-current="page" to="/" className="router-link-active router-link-exact-active">
                             <Logo classNames="h-10"/>
                         </Link>
                         <div className="space-x-10 items-center hidden lg:flex">

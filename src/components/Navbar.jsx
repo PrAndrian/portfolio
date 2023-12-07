@@ -44,7 +44,7 @@ const Navbar = () => {
         <>
             <Menu isOpen={isOpen} setState={setIsOpen} />
             <nav className="w-full fixed z-[888] left-0 top-5">
-                <div className={"flex items-center gap-5 px-[21px] rounded-full py-4 text-center w-fit my-0 mx-auto transition-all duration-500"} style={{background:"black", transform : `translate(0px,${isAtTop?"-150px":"0px"})`}}>
+                <div className={"flex items-center gap-4 px-[21px] rounded-full py-4 text-center w-fit my-0 mx-auto transition-all duration-500"} style={{background:"black", transform : `translate(0px,${isAtTop?"-150px":"0px"})`}}>
                     <Link to="/">
                         <Logo classNames="h-10"/>
                     </Link>
