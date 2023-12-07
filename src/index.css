@@ -27,6 +27,12 @@
 
 .rightToLeft{
   animation: rightToLeft 10s infinite linear;
+  animation-duration: 60s;
+}
+
+.leftToRight{
+  animation: leftToRight 10s infinite linear;
+  animation-duration: 60s;
 }
 
 .rollingText{
@@ -46,5 +52,14 @@
   }
   to{
     transform: translateX(-50%);
+  }
+}
+
+@keyframes leftToRight{
+  form{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(50%);
   }
 }

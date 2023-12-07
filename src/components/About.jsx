@@ -29,9 +29,17 @@ const About = () => {
                 className="bg-cover bg-[25%_50%] lg:bg-center h-[400px] xl:bg-cover xl:bg-[20%] 2xl:bg-cover rounded-lg z-20 w-full xl:h-[650px]" ></div>
             </div>
         </div>
-        <div className="flex mt-[-60px] items-center overflow-hidden text-[100px] lg:text-[130px] "> 
+        <div className="flex mt-[-100px] items-center overflow-hidden text-[100px] lg:text-[130px] "> 
             <div className="whitespace-nowrap font-bold rollingText">
-                <div className="rightToLeft flex gap-2 ">
+                <div className="rightToLeft flex gap-2">
+                    <p className="mb-0">Software Development<span className="text-[#5E17EB] opacity-50">·</span>Javascript<span className="text-[#5E17EB] opacity-50">·</span>UX/UI<span className="text-[#5E17EB] opacity-50">·</span></p>
+                    <p className="mb-0">Software Development<span className="text-[#5E17EB] opacity-50">·</span>Javascript<span className="text-[#5E17EB] opacity-50">·</span>UX/UI<span className="text-[#5E17EB] opacity-50">·</span></p>
+                </div>
+            </div>
+        </div>
+        <div className="flex mt-[-30px] justify-end items-center overflow-hidden text-[100px] lg:text-[130px]"> 
+            <div className="whitespace-nowrap font-bold rollingText ">
+                <div className="leftToRight flex gap-2">
                     <p className="mb-0">Software Development<span className="text-[#5E17EB] opacity-50">·</span>Javascript<span className="text-[#5E17EB] opacity-50">·</span>UX/UI<span className="text-[#5E17EB] opacity-50">·</span></p>
                     <p className="mb-0">Software Development<span className="text-[#5E17EB] opacity-50">·</span>Javascript<span className="text-[#5E17EB] opacity-50">·</span>UX/UI<span className="text-[#5E17EB] opacity-50">·</span></p>
                 </div>
