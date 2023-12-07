@@ -21,7 +21,7 @@ function App() {
           errorElement={<Error404 />}
         />
 
-        <Route path="/*" element={<Error404 />} />
+        <Route path="*" element={<Error404 />} />
       </Route>,
     ),
   );
