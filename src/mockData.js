@@ -81,7 +81,8 @@ export const projects= [
         year: "2022",
         columns:1,
         url: pharmacie,
-        description : "As a web developer, my primary objective was to revitalize and optimize the underperforming e-commerce website, enhancing its design, user experience, and SEO to drive increased sales of parapharmaceutical products. As part of my internship at OpenClassrooms spanning over a year, I undertook a pivotal role in the revitalization of an e-commerce website. The objective was to improve design, enhance user experience, and optimize SEO for increased performance. This internship provided invaluable hands-on experience in addressing real-world challenges and applying web development skills in a professional setting.",
+        website: "https://pharmaciecroixdechavaux.fr/",
+        description : "As a web developer, my primary objective was to revitalize and optimize the underperforming e-commerce website, enhancing its design, user experience, and SEO to drive increased sales of parapharmaceutical products. As part of my internship at OpenClassrooms spanning over a year, I undertook a pivotal role in the revitalization of an e-commerce website.",
         company : "Company lalalala",
         images : [
             pharmacie1,
