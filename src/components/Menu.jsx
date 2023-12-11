@@ -48,10 +48,10 @@ const Menu = ({isOpen,setState}) => {
                             <Logo classNames="h-10"/>
                         </Link>
                         <div className="space-x-10 items-center hidden lg:flex">
-                            <button className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">
+                            <Link to="mailto:princy.workspace@gmail.com" className="cursor-pointer text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 group">
                                 <span>Start a project</span>
                                 <FontAwesomeIcon icon={faArrowRight}  className='w-5 h-5 group-hover:-rotate-45 transition-all duration-300'/>
-                            </button>
+                            </Link>
                             <button onClick={handleClose} >
                                 <FontAwesomeIcon icon={faX} className="w-8 h-8 text-white cursor-pointer hover:opacity-70 transition-all duration-300"/>
                             </button>

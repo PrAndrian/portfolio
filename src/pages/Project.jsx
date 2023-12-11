@@ -3,14 +3,14 @@ import HeroProject from "../components/HeroProject";
 import ProjectDescription from "../components/ProjectDescription";
 import ProjectImages from "../components/ProjectImages";
 import ProjectSteps from "../components/ProjectSteps";
-import ProjectRelated from "../components/ProjectRelated";
+// import ProjectRelated from "../components/ProjectRelated";
 import { useTitle } from "../hooks/useTitle";
 
 const Project = () => {
   const projectData = useLoaderData ();
   
   const {
-    id,
+    // id,
     url,
     title,
     description,
@@ -34,7 +34,7 @@ const Project = () => {
         />
         <ProjectImages images={images}/>
         <ProjectSteps steps={steps}/>
-        <ProjectRelated id={id}/>
+        {/* <ProjectRelated id={id}/> */}
         <ScrollRestoration />
       </section>
     </>

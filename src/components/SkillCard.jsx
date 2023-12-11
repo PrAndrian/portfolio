@@ -1,6 +1,7 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
+import { Link } from "react-router-dom"
 
 const SkillCard = ({title,description,tag}) => {
   return (
@@ -20,10 +21,10 @@ const SkillCard = ({title,description,tag}) => {
             <p>{description}</p>
         </div>
         {!tag ?
-            <button className="bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold items-center space-x-2 group w-40 flex z-20">
+            <Link to="mailto:princy.workspace@gmail.com" className="bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold items-center space-x-2 group w-40 flex z-20">
                 <span>Let&apos;s chat!</span>
                 <FontAwesomeIcon icon={faArrowRight}  className="w-5 h-5 group-hover:-rotate-45 transition-all duration-300"/>
-            </button>
+            </Link>
             :
             <div></div>
         } 

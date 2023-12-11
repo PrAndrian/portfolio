@@ -1,5 +1,6 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link } from "react-router-dom"
 
 const About = () => {
   return (
@@ -17,15 +18,12 @@ const About = () => {
                         Hey! I&apos;m a french web developer fluent in Javascript, on a coding journey for over 2 years. I find joy in turning challenges into vibrant digital stories, bridging the gap between ideas and their online presence.
                         I&apos;ve recently completed my journey at OpenClassrooms, I&apos;m a storyteller at heart, a problem-solving enthusiast, and always ready to bring your digital ideas to life.
                     </p>
-                    <button className="text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 mr-auto mt-4 hover:opacity-80" >
+                    <Link to="mailto:princy.workspace@gmail.com" className="text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 mr-auto mt-4 hover:opacity-80" >
                         <span >Let&apos;s chat!</span>
                         <FontAwesomeIcon icon={faArrowRight} className="w-5 h-5 -rotate-45"/>
-                    </button>
+                    </Link>
                 </div>
-                <div style={{backgroundImage: `image-set(
-                    url(https://www.fundamental.bg/img/fundamental-team.avif) type('image/avif'),
-                    url(https://www.fundamental.bg/img/fundamental-team.webp) type('image/webp')
-                )`}}
+                <div style={{backgroundImage: `url('https://media.licdn.com/dms/image/D4E03AQEe1ADlLjXbzA/profile-displayphoto-shrink_800_800/0/1697386030055?e=1707955200&v=beta&t=7-A4osTAu9eYkFfbeeOTGR3SxVbRWdxi1Cj7PSSQdXQ')`}}
                 className="bg-cover bg-[25%_50%] lg:bg-center h-[400px] xl:bg-cover xl:bg-[20%] 2xl:bg-cover rounded-lg z-20 w-full xl:h-[650px]" ></div>
             </div>
         </div>

@@ -48,9 +48,9 @@ const Navbar = () => {
                     <Link to="/">
                         <Logo classNames="h-10"/>
                     </Link>
-                    <button className="text-white py-2 px-4 rounded-full bg-[#5E17EB] text-lg font-semibold 2xl:text-xl hidden lg:block xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  to="#">
+                    <Link to="mailto:princy.workspace@gmail.com" className="text-white py-2 px-4 rounded-full bg-[#5E17EB] text-lg font-semibold 2xl:text-xl hidden lg:block xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]">
                         Start our journey
-                    </button>
+                    </Link>
                     <button className="cursor-pointer" onClick={handleOpenMenu}>
                         <FontAwesomeIcon icon={faBars} className="w-8 h-8 hover:text-[#5E17EB] transition-all duration-300 text-white"/>
                     </button>
@@ -85,9 +85,9 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <button className="py-2 px-4 rounded bg-[#5E17EB] text-lg font-semibold 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]"  to="#">
+                            <Link to="mailto:princy.workspace@gmail.com" className="py-2 px-4 rounded bg-[#5E17EB] text-lg font-semibold 2xl:text-xl lg:hidden xl:flex transition-all duration-300 hover:bg-white hover:text-[#5E17EB]">
                                 Start our journey
-                            </button>
+                            </Link>
                         </li>
                     </ul>
 
