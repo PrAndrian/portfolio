@@ -18,8 +18,8 @@ const About = () => {
                         Hey! I&apos;m a french web developer fluent in Javascript, on a coding journey for over 2 years. I find joy in turning challenges into vibrant digital stories, bridging the gap between ideas and their online presence.
                         I&apos;ve recently completed my journey at OpenClassrooms, I&apos;m a storyteller at heart, a problem-solving enthusiast, and always ready to bring your digital ideas to life.
                     </p>
-                    <Link to="mailto:princy.workspace@gmail.com" className="text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 mr-auto mt-4 hover:opacity-80" >
-                        <span >Let&apos;s chat!</span>
+                    <Link to="https://drive.google.com/file/d/1zRR6FnXE6ajpMrO2ON1ELwUFgiOcCBKU/view?usp=sharing" className="text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 mr-auto mt-4 hover:opacity-80" >
+                        <span >See my resume !</span>
                         <FontAwesomeIcon icon={faArrowRight} className="w-5 h-5 -rotate-45"/>
                     </Link>
                 </div>
