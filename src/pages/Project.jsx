@@ -5,6 +5,7 @@ import ProjectImages from "../components/ProjectImages";
 import ProjectSteps from "../components/ProjectSteps";
 // import ProjectRelated from "../components/ProjectRelated";
 import { useTitle } from "../hooks/useTitle";
+import Contact from "../components/Contact";
 
 const Project = () => {
   const projectData = useLoaderData ();
@@ -26,7 +27,7 @@ const Project = () => {
   return (
     <>
       <HeroProject title={title} url={url}/>
-      <section className="bg-white py-5 lg:py-20 px-5">
+      <section className="bg-white py-5 lg:pt-20 px-5">
         <ProjectDescription 
           title={title} 
           description={description}
@@ -37,8 +38,9 @@ const Project = () => {
         <ProjectImages images={images}/>
         <ProjectSteps steps={steps}/>
         {/* <ProjectRelated id={id}/> */}
-        <ScrollRestoration />
       </section>
+      <Contact/>  
+      <ScrollRestoration />
     </>
   )
 }
