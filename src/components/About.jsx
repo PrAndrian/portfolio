@@ -1,3 +1,4 @@
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
@@ -18,10 +19,18 @@ const About = () => {
                         Hey! I&apos;m a french web developer fluent in Javascript, on a coding journey for over 2 years. I find joy in turning challenges into vibrant digital stories, bridging the gap between ideas and their online presence.
                         I&apos;ve recently completed my journey at OpenClassrooms, I&apos;m a storyteller at heart, a problem-solving enthusiast, and always ready to bring your digital ideas to life.
                     </p>
-                    <Link to="https://drive.google.com/file/d/1zRR6FnXE6ajpMrO2ON1ELwUFgiOcCBKU/view?usp=sharing" className="text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 mr-auto mt-4 hover:opacity-80" >
-                        <span >See my resume !</span>
-                        <FontAwesomeIcon icon={faArrowRight} className="w-5 h-5 -rotate-45"/>
-                    </Link>
+                    <div className="flex items-center gap-5">
+                        <Link to="https://drive.google.com/file/d/1zRR6FnXE6ajpMrO2ON1ELwUFgiOcCBKU/view?usp=sharing" className="text-lg transition-all duration-300 bg-[#5E17EB] text-white flex-shrink py-3 px-6 rounded font-bold flex items-center space-x-2 mr-auto hover:opacity-80" >
+                            <span >See my resume !</span>
+                            <FontAwesomeIcon icon={faArrowRight} className="w-5 h-5 -rotate-45"/>
+                        </Link>
+                        <Link to="https://www.linkedin.com/in/princy-and/" rel="noopener noreferrer" target="blank">
+                            <FontAwesomeIcon icon={faLinkedin} className='w-8 h-8 text-black hover:text-[#5E17EB] transition-all duration-300' />
+                        </Link>
+                        <Link to="https://github.com/PrAndrian" rel="noopener noreferrer" target="blank">
+                            <FontAwesomeIcon icon={faGithub} className='w-8 h-8 text-black hover:text-[#5E17EB] transition-all duration-300'/>
+                        </Link>
+                    </div>
                 </div>
                 <div style={{backgroundImage: `url('https://media.licdn.com/dms/image/D4E03AQEe1ADlLjXbzA/profile-displayphoto-shrink_800_800/0/1697386030055?e=1707955200&v=beta&t=7-A4osTAu9eYkFfbeeOTGR3SxVbRWdxi1Cj7PSSQdXQ')`}}
                 className="bg-cover bg-[25%_50%] lg:bg-center h-[400px] xl:bg-cover xl:bg-[20%] 2xl:bg-cover rounded-lg z-20 w-full xl:h-[650px]" ></div>
