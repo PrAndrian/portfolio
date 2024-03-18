@@ -83,7 +83,7 @@ export const projects= [
         url: pharmacie,
         website: "https://pharmaciecroixdechavaux.fr/",
         description : "As a web developer, my primary objective was to revitalize and optimize the underperforming e-commerce website, enhancing its design, user experience, and SEO to drive increased sales of parapharmaceutical products. As part of my internship at OpenClassrooms spanning over a year, I undertook a pivotal role in the revitalization of an e-commerce website.",
-        company : "Company lalalala",
+        company : "Grande Pharmacie Croix de Chavaux",
         images : [
             pharmacie1,
             pharmacie2,
