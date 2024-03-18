@@ -32,7 +32,7 @@ const About = () => {
                         </Link>
                     </div>
                 </div>
-                <div style={{backgroundImage: `url('https://media.licdn.com/dms/image/D4E03AQEe1ADlLjXbzA/profile-displayphoto-shrink_800_800/0/1697386030055?e=1707955200&v=beta&t=7-A4osTAu9eYkFfbeeOTGR3SxVbRWdxi1Cj7PSSQdXQ')`}}
+                <div style={{backgroundImage: `url('https://media.licdn.com/dms/image/D4E03AQEe1ADlLjXbzA/profile-displayphoto-shrink_400_400/0/1697386030055?e=1716422400&v=beta&t=nK6NZkdR6oI_wuKlQviYIg9x4j4gMIsHBrr7GNa0qFw')`}}
                 className="bg-cover bg-[25%_50%] lg:bg-center h-[400px] xl:bg-cover xl:bg-[20%] 2xl:bg-cover rounded-lg z-20 w-full xl:h-[650px]" ></div>
             </div>
         </div>
