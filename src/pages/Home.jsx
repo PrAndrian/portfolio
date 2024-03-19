@@ -16,7 +16,7 @@ const Home = () => {
         <Projects/>
         <Contact/>
         <ScrollRestoration />
-  </>
+    </>
   )
 }
 
