@@ -2,6 +2,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import profilPicture from "../assets/picture.jpg";
 
 const About = () => {
   return (
@@ -61,7 +62,7 @@ const About = () => {
           </div>
           <div
             style={{
-              backgroundImage: `url('https://media.licdn.com/dms/image/D4E03AQEe1ADlLjXbzA/profile-displayphoto-shrink_400_400/0/1697386030055?e=1716422400&v=beta&t=nK6NZkdR6oI_wuKlQviYIg9x4j4gMIsHBrr7GNa0qFw')`,
+              backgroundImage: `url(${profilPicture})`,
             }}
             className="bg-cover bg-[25%_50%] lg:bg-center h-[400px] xl:bg-cover xl:bg-[20%] 2xl:bg-cover rounded-lg z-20 w-full xl:h-[650px]"
           ></div>
