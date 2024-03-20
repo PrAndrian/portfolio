@@ -4,12 +4,12 @@ import ProjectDescription from "../components/ProjectDescription";
 import ProjectImages from "../components/ProjectImages";
 import ProjectSteps from "../components/ProjectSteps";
 // import ProjectRelated from "../components/ProjectRelated";
-import { useTitle } from "../hooks/useTitle";
 import Contact from "../components/Contact";
+import { useTitle } from "../hooks/useTitle";
 
 const Project = () => {
-  const projectData = useLoaderData ();
-  
+  const projectData = useLoaderData();
+
   const {
     // id,
     url,
@@ -20,29 +20,29 @@ const Project = () => {
     images,
     steps,
     website,
-  } = projectData
+  } = projectData;
 
   useTitle(`Project -${title}`);
 
   return (
     <>
-      <HeroProject title={title} url={url}/>
-      <section className="bg-white py-5 lg:pt-20 px-5">
-        <ProjectDescription 
-          title={title} 
+      <HeroProject title={title} url={url} />
+      <section className="px-5 py-5 bg-white lg:pt-20">
+        <ProjectDescription
+          title={title}
           description={description}
-          company={company} 
-          year={year} 
+          company={company}
+          year={year}
           url={website}
         />
-        <ProjectImages images={images}/>
-        <ProjectSteps steps={steps}/>
+        <ProjectImages images={images} />
+        <ProjectSteps steps={steps} />
         {/* <ProjectRelated id={id}/> */}
       </section>
-      <Contact/>  
+      <Contact />
       <ScrollRestoration />
     </>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

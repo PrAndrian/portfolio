@@ -1,14 +1,12 @@
-import logo from '../assets/logo.svg'
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
+import logo from "../assets/logo.svg";
 
-const Logo = ({classNames=""}) => {
-  return (
-    <img src={logo}  className={classNames}  alt="Princy-logo"/>
-  )
-}
+const Logo = ({ classNames = "" }) => {
+  return <img src={logo} className={classNames} alt="Princy-logo" />;
+};
 
-Logo.propTypes  = {
-    classNames: PropTypes.string,
-}
+Logo.propTypes = {
+  classNames: PropTypes.string,
+};
 
-export default Logo
+export default Logo;
