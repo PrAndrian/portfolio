@@ -1,22 +1,25 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const ProjectImages = ({images}) => {
+const ProjectImages = ({ images }) => {
   return (
-    <section  className="bg-white my-32 lg:px-5">
-    <div  className="lg:-rotate-6 px-5 lg:px-0">
-      <div  className="grid grid-cols-1 lg:grid-cols-3 gap-x-24 gap-y-12 items-center justify-center">
-        {images.map((image)=>
-          <img key={image} src={image} className="object-scale-down rounded-lg shadow hover:shadow-2xl hover:scale-105 transition-all duration-300"/>
-        )}
+    <section className="my-32 bg-white lg:px-5">
+      <div className="px-5 lg:-rotate-6 lg:px-0">
+        <div className="grid items-center justify-center grid-cols-1 lg:grid-cols-3 gap-x-24 gap-y-12">
+          {images.map((image) => (
+            <img
+              key={image}
+              src={image}
+              className="object-scale-down transition-all duration-300 rounded-lg shadow hover:shadow-2xl hover:scale-105"
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-  )
-}
+    </section>
+  );
+};
 
-ProjectImages.propTypes  = {
-  images:PropTypes.arrayOf(PropTypes.string.isRequired),
-}
+ProjectImages.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string.isRequired),
+};
 
-  
-export default ProjectImages
+export default ProjectImages;

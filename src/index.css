@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.bckg-fundamental{
+.bckg-fundamental {
   background-image: url("./assets/main-background.avif");
 }
 
 .background-menu:after {
-  content:'';
-  position:absolute;;
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -25,41 +25,41 @@
   width: 0;
 }
 
-.rightToLeft{
+.rightToLeft {
   animation: rightToLeft 10s infinite linear;
   animation-duration: 60s;
 }
 
-.leftToRight{
+.leftToRight {
   animation: leftToRight 10s infinite linear;
   animation-duration: 60s;
 }
 
-.rollingText{
-  -webkit-text-stroke-width : 2px;
-  -webkit-text-stroke-color: #5E17EB;
+.rollingText {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #5e17eb;
   -webkit-text-fill-color: #ffffff00;
 }
 
-.rollingTextDark{
-  -webkit-text-stroke-width : 1px;
-  -webkit-text-fill-color: #5E17EB;
+.rollingTextDark {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: #5e17eb;
 }
 
 @keyframes rightToLeft {
-  form{
+  form {
     transform: translateX(0%);
   }
-  to{
+  to {
     transform: translateX(-50%);
   }
 }
 
-@keyframes leftToRight{
-  form{
+@keyframes leftToRight {
+  form {
     transform: translateX(0%);
   }
-  to{
+  to {
     transform: translateX(50%);
   }
 }
